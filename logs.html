@@ -1,11 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Unit 7-B | Online Archives</title>
   <link rel="stylesheet" href="/styles.css" />
+  <!-- OpenGraph for social preview -->
+  <meta property="og:title" content="Unit 7-B Archives" />
+  <meta property="og:description" content="Not gone. Just Watching" />
+  <meta property="og:image" content="https://unit7b.org/images/preview.jpg" />
+  <meta property="og:url" content="https://unit7b.org" />
+  <meta property="og:type" content="website" />
+  <!-- Twitter Card support -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Unit 7-B Archives">
+  <meta name="twitter:description" content="A scavenger hunt woven into Yellowstone's forgotten lore.">
+  <meta name="twitter:image" content="https://unit7b.org/images/preview.png">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/images/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/images/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="/images/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Unit 7-B" />
+  <link rel="manifest" href="/images/favicon/site.webmanifest" />
 </head>
+
 <body class="main">
   <header class="main-header">
     <div class="header-inner">
@@ -15,6 +35,7 @@
         <p class="header-quote">“We serve the Fire. We guard the cache. We trust no raccoon.”</p>
       </div>
       <nav class="header-nav">
+        <a href="/landing.html">Home</a>
         <a href="/manual.html">Manual</a>
         <a href="/logs.html">Logs</a>
         <a href="/portal.html">Access</a>
@@ -24,24 +45,26 @@
     <div class="ticker-wrap">
       <div class="ticker">
         <p>Mission Status Update: Phase 1 - Activation &nbsp;&nbsp;
-        |&nbsp;&nbsp; Field Agents: Cache Fragment Sigma is unstable. Reroute via Lava Creek Trailhead. &nbsp;&nbsp;
-        |&nbsp;&nbsp; Clearance Level: Marmot Required &nbsp;&nbsp;
-        |&nbsp;&nbsp; Transmission #738: “The Fire is never without witness.”</p>
+          |&nbsp;&nbsp; Field Agents: Cache Fragment Sigma is unstable. Reroute via Lava Creek Trailhead. &nbsp;&nbsp;
+          |&nbsp;&nbsp; Clearance Level: Marmot Required &nbsp;&nbsp;
+          |&nbsp;&nbsp; Transmission #738: “The Fire is never without witness.”</p>
       </div>
     </div>
   </header>
-<div class="content-viewport">
+  <div class="content-viewport">
 
 
-  
-</div>
+
+  </div>
   <div class="log-feed-wrapper">
     <div class="log-label">
-      <span class="live-dot"></span>Live Feed:</div>
+      <span class="live-dot"></span>Live Feed:
+    </div>
     <div class="log-feed">
       <div id="log-entry" class="typing"></div>
     </div>
-  </div>  
-  <script src="/js/agentFeed.js"></script>
+    <script src="/js/agentFeed.js"></script>
+    <script src="/js/adjustPadding.js"></script>
 </body>
+
 </html>
