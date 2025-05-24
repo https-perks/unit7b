@@ -1,21 +1,21 @@
 {
-  "name": "MyWebSite",
-  "short_name": "MySite",
+  "name": "Unit 7-B Archives",
+  "short_name": "Unit 7-B",
   "icons": [
     {
-      "src": "/images/web-app-manifest-192x192.png",
+      "src": "/images/favicon/web-app-manifest-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "maskable"
     },
     {
-      "src": "/images/web-app-manifest-512x512.png",
+      "src": "/images/favicon/web-app-manifest-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
     }
   ],
-  "theme_color": "#4a2500",
+  "theme_color": "#524a42",
   "background_color": "#524a42",
   "display": "standalone"
 }
