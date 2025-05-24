@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unit 7-B | Online Archives</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+
+<body class="main">
+  <header class="main-header">
+    <div class="header-inner">
+      <img src="/images/Sigil.png" alt="Sigil" class="header-sigil" />
+      <div class="header-text-group">
+        <h1 class="header-title">Unit 7-B Archives</h1>
+        <p class="header-quote">“We serve the Fire. We guard the cache. We trust no raccoon.”</p>
+      </div>
+      <nav class="header-nav">
+        <a href="/manual.html">Manual</a>
+        <a href="/logs.html">Logs</a>
+        <a href="/portal.html">Access</a>
+        <a href="/agents.html">Agents</a>
+      </nav>
+    </div>
+    <div class="ticker-wrap">
+      <div class="ticker">
+        <p>Mission Status Update: Phase 1 - Activation &nbsp;&nbsp;
+          |&nbsp;&nbsp; Field Agents: Cache Fragment Sigma is unstable. Reroute via Lava Creek Trailhead. &nbsp;&nbsp;
+          |&nbsp;&nbsp; Clearance Level: Marmot Required &nbsp;&nbsp;
+          |&nbsp;&nbsp; Transmission #738: “The Fire is never without witness.”</p>
+      </div>
+    </div>
+  </header>
+  <div class="content-viewport">
+
+    <main class="container">
+      <section style="text-align: center; padding: 4rem 0;">
+        <h2>Directory Status: REDACTED</h2>
+        <p class="quote">Only operatives with Flame clearance may proceed.</p>
+        <p><span class="redacted" id="directory-status">██████████████████████████████████████</span></p>
+        <div id="clearance-access" style="margin-top: 2rem;">
+          <input type="password" id="raven-code" placeholder="Enter Clearance Code" />
+          <button onclick="revealAgents()">Verify</button>
+          <p id="access-denied" style="color: rgb(151, 0, 0); display: none; font-weight: bold;">Access Denied</p>
+        </div>
+
+      </section>
+
+      <section>
+        <h3>Agent Listings (CLASSIFIED)</h3>
+        <ul class="no-bullets">
+            <li>Director Pines — Once mistook a bear for a fellow operative.<br>
+              True identity: <span class="redacted" id="agent-pines">████████</span></li>
+          
+            <li>Agent Ember — Carries three pinecones at all times. Won’t say why.<br>
+              True identity: <span class="redacted" id="agent-ember">██████████</span></li>
+          
+            <li>Agent Drift — Believes the geysers are listening.<br>
+              True identity: <span class="redacted" id="agent-drift">████████████</span></li>
+          
+            <li>Agent Wren — Only communicates through riddles and protein pancakes.<br>
+              True identity: <span class="redacted" id="agent-wren">████████</span></li>
+          
+            <li>Agent Cinder — Once reported a ghost elk. Wasn’t joking.<br>
+              True identity: <span class="redacted" id="agent-cinder">██████████</span></li>
+          
+            <li>Agent Hollow — Lives in a tree. Sleeps in a hammock. Year-round.<br>
+              True identity: <span class="redacted" id="agent-hollow">████████</span></li>
+          
+            <li>Agent Tern — Filed 11 incident reports against ravens. All approved.<br>
+              True identity: <span class="redacted" id="agent-tern">████████████</span></li>
+          
+            <li>Agent Soot — Leaves charcoal marks as a breadcrumb system. Forgets to follow them.<br>
+              True identity: <span class="redacted" id="agent-soot">████████████</span></li>
+          
+            <li>Agent Fawn — Once went undercover as a chipmunk. Got too into it.<br>
+              True identity: <span class="redacted" id="agent-fawn">████████</span></li>
+          
+            <li>Agent Glint — Wears mirrored sunglasses even at night. No one knows why.<br>
+              True identity: <span class="redacted" id="agent-glint">████████</span></li>
+          
+            <li>Agent Echo — Responds to all radios with poetry. Always.<br>
+              True identity: <span class="redacted" id="agent-echo">██████████</span></li>
+          
+            <li>Agent Flint — Uses a pine needle as a bookmark. Says it’s “encrypted.”<br>
+              True identity: <span class="redacted" id="agent-flint">██████████</span></li>
+        </ul>
+      </section>
+
+      <section style="margin-top: 4rem;">
+        <blockquote>
+          "If you are reading this, you were never meant to find us. You were meant to <span class="redacted" aria-label="REDACTED" id="quote">██████████</span>."
+          <br><span class="redacted" aria-label="REDACTED" id="directive">- Directive Echo</span>
+        </blockquote>
+      </section>
+    </main>
+
+  </div>
+  <div class="log-feed-wrapper">
+    <div class="log-label">
+      <span class="live-dot"></span>Live Feed:
+    </div>
+    <div class="log-feed">
+      <div id="log-entry" class="typing"></div>
+    </div>
+  </div>
+  <script src="/js/agentFeed.js"></script>
+  <script src="/js/AgentsReveal.js"></script>
+</body>
+
+</html>
