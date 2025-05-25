@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unit 7-B | Online Archives</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <!-- OpenGraph for social preview -->
+  <meta property="og:title" content="Unit 7-B Archives" />
+  <meta property="og:description" content="Not gone. Just Watching" />
+  <meta property="og:image" content="https://unit7b.org/images/preview.jpg" />
+  <meta property="og:url" content="https://unit7b.org" />
+  <meta property="og:type" content="website" />
+  <!-- Twitter Card support -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Unit 7-B Archives">
+  <meta name="twitter:description" content="A scavenger hunt woven into Yellowstone's forgotten lore.">
+  <meta name="twitter:image" content="https://unit7b.org/images/preview.png">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/images/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/images/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="/images/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Unit 7-B" />
+  <link rel="manifest" href="/images/favicon/site.webmanifest" />
+</head>
+
+<body class="main">
+  <header class="main-header">
+    <div class="header-inner">
+      <img src="/images/Sigil.png" alt="Sigil" class="header-sigil" />
+      <div class="header-text-group">
+        <h1 class="header-title">Unit 7-B Archives</h1>
+        <p class="header-quote">“We serve the Fire. We guard the cache. We trust no raccoon.”</p>
+      </div>
+      <nav class="header-nav">
+        <a href="/landing.html">Home</a>
+        <a href="/manual.html">Manual</a>
+        <a href="/logs.html">Logs</a>
+        <a href="/portal.html">Access</a>
+        <a href="/agents.html">Agents</a>
+      </nav>
+    </div>
+    <div class="ticker-wrap">
+      <div class="ticker">
+        <p>Mission Status Update: Phase 1 - Activation &nbsp;&nbsp;
+          |&nbsp;&nbsp; Field Agents: Cache Fragment Sigma is unstable. Reroute via Lava Creek Trailhead. &nbsp;&nbsp;
+          |&nbsp;&nbsp; Clearance Level: Marmot Required &nbsp;&nbsp;
+          |&nbsp;&nbsp; Transmission #738: “The Fire is never without witness.”</p>
+      </div>
+    </div>
+  </header>
+  <main class="container content-viewport">
+    <section class="glitch-wrapper" style="margin-bottom: 2rem;">
+      <span class="glitch-text" data-text="UNIT 7-B ARCHIVE NODE: ACCESSING RACCOON LOGS...">UNIT 7-B ARCHIVE NODE:<p>
+          ACCESSING RACCOON LOGS...</p></span>
+    </section>
+    <p class="quote" style="font-size: 1.25rem; text-align: center;">Warning: Clearance Level Raven or higher required
+      for full visibility.</p>
+
+    <ul class="log-categories">
+      <li class="full-span"><a href="/logs.html" class="log-button">Back To All Logs</a></li>
+    </ul>
+    <section style="text-align: center; padding: 2rem 0;">
+      <p><span class="redacted" id="raccoon-status">███████████ ████████ ████████████ ███████</span></p>
+      <div id="clearance-access" style="margin-top: 2rem;">
+        <input type="password" id="pines-code" placeholder="Enter Clearance Code" />
+        <button onclick="revealRaccoonLogs()">Verify</button>
+        <p id="access-denied" style="color: rgb(151, 0, 0); display: none; font-weight: bold;">Access Denied</p>
+      </div>
+    </section>
+<article class="log-entry">
+  <h2>Log #401 – Mess Hall Dumpster</h2>
+  <h3>Report by Agent Pines</h3>
+  <p>Raccoon observed bypassing padlock. Accessed entire contents. Evidence of teamwork: <span class="redacted" id="OperationMidnightSnack">██████████</span>.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #402 – South Trail Cam</h2>
+  <h3>Report by Agent Drift</h3>
+  <p>Camera found covered in tiny pawprints. Video shows raccoons forming "V" formation. Interruption at 02:11 am, all footage redacted.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #403 – Chapel Supply Closet</h2>
+  <h3>Report by Agent Wren</h3>
+  <p>All hymnals replaced with torn snack wrappers. Chewed Bible open to Psalm <span class="redacted" id="Psalm27">27</span>.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #404 – Lake Cabin 3B</h2>
+  <h3>Report by Agent Ember</h3>
+  <p>Cache raided overnight. Raccoon left message in jam: <span class="redacted" id="NotYourCache">"NOT YOUR CACHE"</span>. </p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #405 – Dorm Hallway</h2>
+  <h3>Report by Agent Pines</h3>
+  <p>Agent tripped over line of acorns spelling <span class="redacted" id="StayBack">"STAY BACK"</span>. Suspect raccoon warning tactic.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #406 – West Storage Shed</h2>
+  <h3>Report by Agent Drift</h3>
+  <p>Padlock missing. Found wedged in vending machine. Note inside: <span class="redacted" id="AccessGranted">"ACCESS GRANTED"</span>.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #407 – Lost and Found</h2>
+  <h3>Report by Agent Ember</h3>
+  <p>Entire bin missing. Security footage replaced by looping raccoon staring directly into camera for 7 hours.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #408 – Bear Box 7</h2>
+  <h3>Report by Agent Pines</h3>
+  <p>Cache found filled with glitter, trail mix, and single rubber duck. Suspected Raccoon Syndicate "calling card".</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #409 – Old Faithful Restroom</h2>
+  <h3>Report by Agent Wren</h3>
+  <p>Raccoons lined entire sink area with toilet paper. No human prints present. Mirror fogged with "🐾🐾🐾".</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #410 – Observation Bunker</h2>
+  <h3>Report by Agent Drift</h3>
+  <p>Surveillance system shows static, then flashes "We see you" at 3:33 am. No entry logged. All trash cans emptied.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #411 – Supply Truck</h2>
+  <h3>Report by Agent Ember</h3>
+  <p>Engine compartment filled with acorns, sunflower seeds, and field log page #42. Suspected message: <span class="redacted" id="Field42">42</span>.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #412 – Campfire Ring 2</h2>
+  <h3>Report by Agent Pines</h3>
+  <p>Campfire ring rearranged into pentagram. Marshmallows missing. Charred pawprint in center—glowed orange for two minutes.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #413 – Canteen</h2>
+  <h3>Report by Agent Wren</h3>
+  <p>Agents report suspicious fizzing in water supply. Analysis: trace of grape soda. Field notes left in raccoon handwriting.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #414 – Supply Closet</h2>
+  <h3>Report by Agent Drift</h3>
+  <p>Every flashlight battery missing. Single pawprint on shelf. Tape recorder left playing faint giggling noises.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #415 – North Pavilion</h2>
+  <h3>Report by Agent Ember</h3>
+  <p>Picnic tables rearranged in a maze. Acorns at every corner. Overheard faint chant: <span class="redacted" id="TheMaze">"THE MAZE"</span>.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #416 – Dorm Room 8A</h2>
+  <h3>Report by Agent Pines</h3>
+  <p>Field uniform shredded. Raccoon hair left on every button. Desk sticky note: <span class="redacted" id="NiceTry">"NICE TRY"</span>.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #417 – Canteen Refrigerator</h2>
+  <h3>Report by Agent Wren</h3>
+  <p>All cheese replaced by pebbles. Single note: <span class="redacted" id="CheddarHeist">"CHΞDDAR HΞIST"</span>.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #418 – Rec Room</h2>
+  <h3>Report by Agent Drift</h3>
+  <p>Foosball table reassembled upside down. Only clue: one raccoon whisker taped to the goalie.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #419 – Trash Corral</h2>
+  <h3>Report by Agent Ember</h3>
+  <p>All bags arranged to form "7-B". Dumpster padlock left with chewed key. Security camera covered in peanut butter.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #420 – EDR Kitchen</h2>
+  <h3>Report by Agent Pines</h3>
+  <p>Food order system sent out mysterious message: <span class="redacted" id="MidnightBanquet">"MIDNIGHT BANQUET"</span>. All potato chips missing.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #421 – Power Shed</h2>
+  <h3>Report by Agent Wren</h3>
+  <p>Lights flickered in Morse code. Decoded: <span class="redacted" id="InTheWalls">"IN THE WALLS"</span>.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #422 – Dorm Bathroom</h2>
+  <h3>Report by Agent Drift</h3>
+  <p>Every soap dispenser empty. Single pawprint in each sink. Mirror fogged with message: <span class="redacted" id="NotClean">"NOT CLEAN"</span>.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #423 – Cache 3B</h2>
+  <h3>Report by Agent Ember</h3>
+  <p>Cache contents replaced with pine cones. Field notes show code: <span class="redacted" id="Conetact">"CONETACT"</span>.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #424 – West Trail</h2>
+  <h3>Report by Agent Pines</h3>
+  <p>Path lined with tiny stick arrows pointing east. Surveillance footage shows dozens of raccoons working in silence at 4:44 am.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #425 – Dumpster Bay</h2>
+  <h3>Report by Agent Wren</h3>
+  <p>Agent startled by synchronized raccoon "staredown." Lasted four minutes. Agent later discovered their lunch was missing.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #426 – Mess Hall</h2>
+  <h3>Report by Agent Drift</h3>
+  <p>Every utensil coated in grape jelly. Silverware drawer jammed shut with paw-shaped wad of napkins.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #427 – Chapel Roof</h2>
+  <h3>Report by Agent Ember</h3>
+  <p>Pawprints lead up and over steeple. Small nest built out of hymn page shreds and foil gum wrappers.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #428 – Security Office</h2>
+  <h3>Report by Agent Pines</h3>
+  <p>All monitor feeds replaced by looping footage of a raccoon in a tiny tuxedo, bowing repeatedly.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #429 – Basement Archive</h2>
+  <h3>Report by Agent Wren</h3>
+  <p>Important files shredded, then neatly stacked. Audio logs erased and replaced by sound of running water.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #430 – Field Office Printer</h2>
+  <h3>Report by Agent Pines</h3>
+  <p>Printer jammed with acorn shells. Last document contained only the phrase: <span class="redacted" id="WeAreMany">"WE ARE MANY"</span>.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #431 – Admin Desk</h2>
+  <h3>Report by Agent Drift</h3>
+  <p>Post-it notes rearranged into a crude map of the campground. Raccoon pawprint circled in red ink at the "X".</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #432 – South Fence Line</h2>
+  <h3>Report by Agent Ember</h3>
+  <p>Fence breached in three places. Raccoons filmed carrying small tool kit. Security feed ends abruptly at 2:06 am.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #433 – Chapel Basement</h2>
+  <h3>Report by Agent Wren</h3>
+  <p>Storage bins raided. Discarded items spell: <span class="redacted" id="WeKnow">"WE KNOW"</span> in loose batteries.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #434 – EDR Trash Bin</h2>
+  <h3>Report by Agent Pines</h3>
+  <p>Raccoons witnessed sorting trash by color and type. Recyclables placed in correct bins. Non-recyclables left in a smiley face.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #435 – Kitchen Pantry</h2>
+  <h3>Report by Agent Drift</h3>
+  <p>Entire box of pancake mix missing. Found empty box in trees with message: <span class="redacted" id="MoreSyrup">"MORE SYRUP"</span> written in syrup.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #436 – Observation Tower</h2>
+  <h3>Report by Agent Ember</h3>
+  <p>Binoculars smeared with jelly. All snack bars missing. Top rail engraved: <span class="redacted" id="TooSlow">"TOO SLOW"</span>.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #437 – Rec Room Couch</h2>
+  <h3>Report by Agent Wren</h3>
+  <p>Cushions flipped. Popcorn trail leads to crawlspace. Final kernel arranged on floor spells: <span class="redacted" id="FindUs">"FIND US"</span>.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #438 – Field Manual Locker</h2>
+  <h3>Report by Agent Pines</h3>
+  <p>Manual found heavily annotated in what appears to be raccoon script. Page 37 missing.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #439 – North Gate</h2>
+  <h3>Report by Agent Drift</h3>
+  <p>Raccoon dragged orange traffic cone 50 feet up the road. Camera footage ends with cone pointed at lens.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #440 – Cafeteria Freezer</h2>
+  <h3>Report by Agent Ember</h3>
+  <p>All frozen peas stacked into pyramid. Single pawprint on ice. Note stuck to door: <span class="redacted" id="GreenCode">"GREEN CODE"</span>.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #441 – Infirmary Supply</h2>
+  <h3>Report by Agent Wren</h3>
+  <p>Bandages chewed, replaced by neatly folded napkins. Only clue: <span class="redacted" id="NiceWork">"NICE WORK, DOC"</span>.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #442 – Chapel Bell Rope</h2>
+  <h3>Report by Agent Pines</h3>
+</article><br>
+<article class="log-entry glitch-text scanlines" style="background-color: #2a2a2a;"
+  data-text="Pa███ern █n ███ █n██ █h██ █a██ █ack. ██r██l c██e █c█rn █n ██ █████.">
+  Pa███ern █n ███ █n██ █h██ █a██ █ack. ██r██l c██e █c█rn █n ██ █████.<br>
+  Re██r██ ██ ███ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██ ██
+</article>
+
+<article class="log-entry">
+  <h2>Log #443 – Lost & Found</h2>
+  <h3>Report by Agent Drift</h3>
+  <p>Unclaimed mitten filled with candy wrappers and two acorns. Handwritten note inside: <span class="redacted" id="NotLost">NOT LOST</span>.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #444 – Power Shed</h2>
+  <h3>Report by Agent Ember</h3>
+  <p>Main breaker tripped. Circuit labeled “Cache Defense” gnawed through. Raccoon tail fur caught on switch.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #445 – Rec Hall Vending Machine</h2>
+  <h3>Report by Agent Wren</h3>
+  <p>Raccoon locked inside, eating only salted peanuts. Glass cleaned from inside. Display flashed: <span class="redacted" id="TryAgain">TRY AGAIN</span>.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #446 – South Storage</h2>
+  <h3>Report by Agent Pines</h3>
+  <p>All sleeping bags unzipped and re-zipped in pairs. Muddy paw prints on every pillow. Smells like grape soda.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #447 – EDR Snack Fridge</h2>
+  <h3>Report by Agent Drift</h3>
+  <p>Mini-yogurts punctured but unopened. Raccoon teeth marks confirmed. Fridge rearranged by expiration date.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #448 – Tool Shed</h2>
+  <h3>Report by Agent Ember</h3>
+  <p>All wrenches covered in honey. Small, muddy pawprint on the bolt cutters. Note taped to wall: <span class="redacted" id="CloseEnough">CLOSE ENOUGH</span>.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #449 – North Generator</h2>
+  <h3>Report by Agent Wren</h3>
+  <p>Generator tampered with. Emergency backup battery replaced with a rock painted “+”.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #450 – Canteen Supply Closet</h2>
+  <h3>Report by Agent Pines</h3>
+  <p>Five bags of marshmallows missing. Empty wrappers spell “WE FEAST” in the dust.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #451 – Admin Mailbox</h2>
+  <h3>Report by Agent Drift</h3>
+  <p>Received an acorn labeled “TOP SECRET”. Envelope sealed with a sticky pawprint.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #452 – South Gate</h2>
+  <h3>Report by Agent Ember</h3>
+  <p>Gate propped open with a pinecone. Chalk arrow on the ground points west. Trail cam footage corrupted.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #453 – Laundry Room</h2>
+  <h3>Report by Agent Wren</h3>
+  <p>All socks missing except left ones. Single note found: <span class="redacted" id="YoullNeverFindThem">YOU’LL NEVER FIND THEM</span>.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #454 – Maintenance Cart</h2>
+  <h3>Report by Agent Pines</h3>
+  <p>Cart covered in sticky notes—every note reads: <span class="redacted" id="NoRunning">NO RUNNING IN THE HALLS</span>.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #455 – Main Gate</h2>
+  <h3>Report by Agent Drift</h3>
+  <p>Raccoons attempted to pick lock with a popsicle stick. Surveillance audio: “Shh! He’s coming.”</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #456 – Mess Hall Pantry</h2>
+  <h3>Report by Agent Ember</h3>
+  <p>Cans stacked in shape of a raccoon face. Center can contains single green grape. Date-stamp altered to “FOREVER”.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #457 – East Perimeter</h2>
+  <h3>Report by Agent Wren</h3>
+  <p>Raccoon-shaped snow angels discovered after late spring storm. Sunflower seeds at each “paw”.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #458 – Raccoon HQ?</h2>
+  <h3>Report by Agent Pines</h3>
+  <p>GPS tracker pinged for 14 hours in the same hollow log. When checked, only a pinecone and a single peanut.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #459 – Chapel Nave</h2>
+  <h3>Report by Agent Drift</h3>
+  <p>Hymnal pages chewed to form “secret” tunnel between pews. Sounded like giggling heard after hours.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #460 – Parking Lot</h2>
+  <h3>Report by Agent Ember</h3>
+  <p>All windshield wipers set straight up. Pawprints vanish at edge of curb. One wiper missing, presumed stolen.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #461 – Kitchen Door</h2>
+  <h3>Report by Agent Wren</h3>
+  <p>Red sticky substance smeared on doorknob. DNA test: 95% strawberry jam, 5% unknown.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #462 – Chapel Balcony</h2>
+  <h3>Report by Agent Pines</h3>
+  <p>Pile of acorns found in the offertory plate. Several have initials carved: <span class="redacted" id="RS13">RS-13</span>.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #463 – South Fire Ring</h2>
+  <h3>Report by Agent Drift</h3>
+  <p>Charred sticks arranged in runic shapes. Raccoon observed dancing in the ashes at midnight.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #464 – Equipment Closet</h2>
+  <h3>Report by Agent Ember</h3>
+  <p>All flashlights switched to “red” mode. Chewed battery cover left behind.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #465 – Archives Room</h2>
+  <h3>Report by Agent Wren</h3>
+  <p>Historical photograph of raccoons from 1982 glued into operations manual, page 77. Caption: “WE NEVER LEFT”.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #466 – Rec Room TV</h2>
+  <h3>Report by Agent Pines</h3>
+  <p>TV left on static. Pawprint pressed into screen dust. Remote control found inside cereal box.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #467 – North Dock</h2>
+  <h3>Report by Agent Drift</h3>
+  <p>Paddle boat unmoored and adrift. Pawprints and cracker crumbs on the seat. Boat nameplate altered: “SS RA-COON”.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #468 – Hallway Clock</h2>
+  <h3>Report by Agent Ember</h3>
+  <p>Clock set 17 minutes fast. “IT’S TIME” scrawled in peanut butter under battery flap.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #469 – West Storage Shed</h2>
+  <h3>Report by Agent Wren</h3>
+  <p>Hammock chewed free and dragged outside. Video review: Raccoons using it as a swing set.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #470 – Laundry Room Vents</h2>
+  <h3>Report by Agent Pines</h3>
+</article><br>
+<article class="log-entry glitch-text scanlines" style="background-color: #2a2a2a;"
+  data-text="S██ ██eck ██ ██ ██ ████ ██ ██ ██s. C███ch ████ ██ ██ ██ ██ ██ ██r ██c██.">
+  S██ ██eck ██ ██ ██ ████ ██ ██ ██s. C███ch ████ ██ ██ ██ ██ ██ ██r ██c██.<br>
+  ██c██s ██ ███ ██ ██ ███ ██████ █ ██████ ██ ████████ ████ ██ ██ ██████████
+</article>
+
+<article class="log-entry">
+  <h2>Log #470 – Laundry Room Vents</h2>
+  <h3>Report by Agent Pines</h3>
+  <p>Vent covers removed and stacked to spell “VENTED”. Dryer sheet trail leads outside.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #471 – Main Office Keyboard</h2>
+  <h3>Report by Agent Drift</h3>
+  <p>All keys rearranged in alphabetical order. Pawprint in dust on spacebar.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #472 – Bulletin Board</h2>
+  <h3>Report by Agent Ember</h3>
+  <p>All announcements replaced with acorn “art”. Only readable text: <span class="redacted" id="Soon">SOON</span>.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #473 – West Gate</h2>
+  <h3>Report by Agent Wren</h3>
+  <p>Raccoons seen swapping gate padlock with combination bike lock. Combination unknown.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #474 – Cafeteria Line</h2>
+  <h3>Report by Agent Pines</h3>
+  <p>Raccoons cut in line during taco night. Security footage erased. Guacamole missing.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #475 – Canoe Rack</h2>
+  <h3>Report by Agent Drift</h3>
+  <p>One canoe filled with pinecones and shiny rocks. Paddle covered in bite marks.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #476 – Archive Safe</h2>
+  <h3>Report by Agent Ember</h3>
+  <p>Safe found open and empty except for a single feather and note: <span class="redacted" id="TryHarder">TRY HARDER</span>.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #477 – Woodshed</h2>
+  <h3>Report by Agent Wren</h3>
+  <p>Firewood stacked in checkerboard pattern. Raccoon tail poking from bottom row; vanished on approach.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #478 – Lost & Found</h2>
+  <h3>Report by Agent Pines</h3>
+  <p>Found collection of mismatched keys, each tagged with a drawing of a raccoon mask.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #479 – Kitchen Cupboard</h2>
+  <h3>Report by Agent Drift</h3>
+  <p>All spices swapped for glitter. Cinnamon jar labeled: <span class="redacted" id="RaccoonDust">RACCOON DUST</span>.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #480 – Chapel Altar</h2>
+  <h3>Report by Agent Ember</h3>
+  <p>Pile of sunflower seed shells arranged in a spiral. Raccoon pawprint in wax drippings.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #481 – Rec Hall Projector</h2>
+  <h3>Report by Agent Wren</h3>
+  <p>Slide tray filled with hand-drawn cartoons of agents with raccoon tails. Projector jammed with peanut butter.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #482 – North Gate</h2>
+  <h3>Report by Agent Pines</h3>
+  <p>“NO HUMANS ALLOWED” scratched in dirt. Agents report faint chittering laughter at midnight.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #483 – Canteen Window</h2>
+  <h3>Report by Agent Drift</h3>
+  <p>Pawprints lead up wall, across glass, and disappear. Window cleaned spotless except for “HI” in the condensation.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #484 – Mailroom</h2>
+  <h3>Report by Agent Ember</h3>
+  <p>Mailbags emptied and refilled with pine needles. Parcel stamped: <span class="redacted" id="ReturnToSender">RETURN TO SENDER</span>.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #485 – Kitchen Sink</h2>
+  <h3>Report by Agent Wren</h3>
+  <p>Spoon balanced perfectly on faucet handle. All dish soap replaced with mysterious clear liquid.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #486 – Trailhead Sign</h2>
+  <h3>Report by Agent Pines</h3>
+  <p>Sign altered to read: “TRAIL CLOSED FOR RACCOON BUSINESS”. No witnesses.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #487 – Storage Loft</h2>
+  <h3>Report by Agent Drift</h3>
+  <p>Sleeping bag dragged up ladder, filled with marshmallow fluff and acorns. Scent of maple syrup detected.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #488 – Trash Bin 7</h2>
+  <h3>Report by Agent Ember</h3>
+  <p>Trash separated into three precise piles: snack wrappers, tin foil, and forbidden bananas.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #489 – Lodge Fireplace</h2>
+  <h3>Report by Agent Wren</h3>
+  <p>Fireplace blocked by expertly stacked firewood fort. “NO HUMANS” banner in marker. Banner spelled backwards.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #490 – Bunkhouse Mirror</h2>
+  <h3>Report by Agent Pines</h3>
+  <p>Message in condensation: <span class="redacted" id="WeSeeAll">WE SEE ALL</span>. Mirror frame gnawed.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #491 – Snack Stash</h2>
+  <h3>Report by Agent Drift</h3>
+  <p>Stolen crackers found under the porch. Tiny pawprints lead to drainage culvert marked “VIP ONLY”.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #492 – North Woods</h2>
+  <h3>Report by Agent Ember</h3>
+  <p>Pawprint trails form concentric circles. Center marked by a single, uncracked walnut.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #493 – Hall Closet</h2>
+  <h3>Report by Agent Wren</h3>
+  <p>All cleaning supplies replaced by one roll of duct tape. Raccoon-sized hole chewed in drywall behind mop bucket.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #494 – Chapel Pews</h2>
+  <h3>Report by Agent Pines</h3>
+  <p>Pew cushions shredded. Loose thread woven into “WHO WATCHES YOU” and a crude raccoon face.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #495 – Dining Hall Table</h2>
+  <h3>Report by Agent Drift</h3>
+  <p>Centerpiece replaced with pinecone pyramid. “RESERVED FOR THE SYNDICATE” scrawled underneath.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #496 – Coffee Pot</h2>
+  <h3>Report by Agent Ember</h3>
+  <p>Entire pot brewed with Cheetos. Smell lingers for three days. Filter basket missing.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #497 – Lost Cache #2</h2>
+  <h3>Report by Agent Wren</h3>
+  <p>Cache contents swapped for pinecones and rubber bands. Original contents unrecovered. Note: <span class="redacted" id="TryAgain2">TRY AGAIN</span>.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #498 – Sound Booth</h2>
+  <h3>Report by Agent Pines</h3>
+  <p>All dials set to max. Feedback loop caught on tape: chittering followed by the words “WE HEAR YOU”.</p>
+</article><br>
+
+<article class="log-entry">
+  <h2>Log #499 – Hidden Tunnel 7</h2>
+  <h3>Entry incomplete.</h3>
+  <p><span class="redacted" id="Five agents sent. None returned.">█████████████████████████████████</span></p>
+  <article class="log-entry glitch-text scanlines" style="background-color: #2a2a2a;"
+    data-text="██c██ns █aw ██ ██rk █nd s█iled. D██r c█osed b█h██d.">
+    ██c██ns █aw ██ ██rk █nd s█iled. D██r c█osed b█h██d.<br>
+    S██ll of ac██ns l██ger█.<br>
+    ██ ████ ██ ████ ██ ████ ██ ████ ██████ ████████ ██ ████ ████ ██ ██████
+  </article><br>
+</article><br>
+
+  </main>
+  <div class="log-feed-wrapper">
+    <div class="log-label">
+      <span class="live-dot"></span>Live Feed:
+    </div>
+    <div class="log-feed scanlines">
+      <div id="log-entry" class="typing"></div>
+    </div>
+  </div>
+  </div>
+  <script src="/js/agentFeed.js"></script>
+  <script src="/js/adjustPadding.js"></script>
+  <script src="/js/subLogsReveal.js"></script>
+  <svg style="display: none;">
+    <filter id="wave">
+      <feTurbulence type="turbulence" baseFrequency="0.003 0.08" numOctaves="1" result="turbulence" />
+      <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="4" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+  </svg>
+</body>
+
+</html>

@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unit 7-B | Online Archives</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <!-- OpenGraph for social preview -->
+  <meta property="og:title" content="Unit 7-B Archives" />
+  <meta property="og:description" content="Not gone. Just Watching" />
+  <meta property="og:image" content="https://unit7b.org/images/preview.jpg" />
+  <meta property="og:url" content="https://unit7b.org" />
+  <meta property="og:type" content="website" />
+  <!-- Twitter Card support -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Unit 7-B Archives">
+  <meta name="twitter:description" content="A scavenger hunt woven into Yellowstone's forgotten lore.">
+  <meta name="twitter:image" content="https://unit7b.org/images/preview.png">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/images/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/images/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="/images/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Unit 7-B" />
+  <link rel="manifest" href="/images/favicon/site.webmanifest" />
+</head>
+
+<body class="main">
+  <header class="main-header">
+    <div class="header-inner">
+      <img src="/images/Sigil.png" alt="Sigil" class="header-sigil" />
+      <div class="header-text-group">
+        <h1 class="header-title">Unit 7-B Archives</h1>
+        <p class="header-quote">“We serve the Fire. We guard the cache. We trust no raccoon.”</p>
+      </div>
+      <nav class="header-nav">
+        <a href="/landing.html">Home</a>
+        <a href="/manual.html">Manual</a>
+        <a href="/logs.html">Logs</a>
+        <a href="/portal.html">Access</a>
+        <a href="/agents.html">Agents</a>
+      </nav>
+    </div>
+    <div class="ticker-wrap">
+      <div class="ticker">
+        <p>Mission Status Update: Phase 1 - Activation &nbsp;&nbsp;
+          |&nbsp;&nbsp; Field Agents: Cache Fragment Sigma is unstable. Reroute via Lava Creek Trailhead. &nbsp;&nbsp;
+          |&nbsp;&nbsp; Clearance Level: Marmot Required &nbsp;&nbsp;
+          |&nbsp;&nbsp; Transmission #738: “The Fire is never without witness.”</p>
+      </div>
+    </div>
+  </header>
+  <main class="container content-viewport">
+    <section class="glitch-wrapper" style="margin-bottom: 2rem;">
+      <span class="glitch-text" data-text="UNIT 7-B ARCHIVE NODE: ACCESSING EMBERLIGHT LOGS...">UNIT 7-B ARCHIVE NODE:<p>
+          ACCESSING EMBERLIGHT LOGS...</p></span>
+    </section>
+    <p class="quote" style="font-size: 1.25rem; text-align: center;">Warning: Clearance Level Raven or higher required
+      for full visibility.</p>
+
+    <ul class="log-categories">
+      <li class="full-span"><a href="/logs.html" class="log-button">Back To All Logs</a></li>
+    </ul>
+    <section style="text-align: center; padding: 2rem 0;">
+      <p><span class="redacted" id="emberlight-status">███████████ ████████ ████████████ ███████</span></p>
+      <div id="clearance-access" style="margin-top: 2rem;">
+        <input type="password" id="pines-code" placeholder="Enter Clearance Code" />
+        <button onclick="revealEmberlightLogs()">Verify</button>
+        <p id="access-denied" style="color: rgb(151, 0, 0); display: none; font-weight: bold;">Access Denied</p>
+      </div>
+    </section>
+    <article class="log-entry">
+      <h2>Log #301 – Lower Geyser Basin</h2>
+      <h3>Report by Agent Pines</h3>
+      <p>Flame appeared on the water’s surface at 03:00. Did not produce heat. Extinguished when Psalm 19 was recited.
+      </p>
+    </article><br>
+
+    <article class="log-entry">
+      <h2>Log #302 – Mammoth Chapel Vestibule</h2>
+      <h3>Report by Agent Wren</h3>
+      <p>Candle ignited itself during silent prayer. Wax melted upward. Archive fragment: <span class="redacted"
+          id="WaxRising">█████</span>.</p>
+    </article><br>
+
+    <article class="log-entry">
+      <h2>Log #303 – Blacktail Ridge</h2>
+      <h3>Report by Agent Drift</h3>
+      <p>Three embers hovered midair for 42 seconds. Wind direction reversed in their presence. Embers vanished when
+        approached.</p>
+    </article><br>
+
+    <article class="log-entry">
+      <h2>Log #304 – Yellowstone River Bank</h2>
+      <h3>Report by Agent Ember</h3>
+      <p>Agent’s field notes began to smolder, then self-extinguished, leaving behind only the phrase: <span
+          class="redacted" id="WrittenInAsh">█████</span>.</p>
+    </article><br>
+
+    <article class="log-entry">
+      <h2>Log #305 – Norris Trailhead</h2>
+      <h3>Report by Agent Pines</h3>
+      <p>Trail sign glowed faintly orange at dusk. Sign cool to touch. Later examination revealed burned-in sigil: <span
+          class="redacted" id="SigilN">█████</span>.</p>
+    </article><br>
+
+    <article class="log-entry">
+      <h2>Log #306 – Lake Overlook</h2>
+      <h3>Report by Agent Wren</h3>
+      <p>Fire ring found intact despite rain. Logs inside dry and warm, but no fire present. Thermal camera
+        malfunctioned.</p>
+    </article><br>
+
+    <article class="log-entry">
+      <h2>Log #307 – Canyon Cafeteria</h2>
+      <h3>Report by Agent Drift</h3>
+      <p>Microwave displayed "EMBERLIGHT" on digital screen. Popcorn came out uncooked but slightly glowing.</p>
+    </article><br>
+
+    <article class="log-entry">
+      <h2>Log #308 – West Thumb Boardwalk</h2>
+      <h3>Report by Agent Ember</h3>
+      <p>Faint humming sound matched with a pulsing glow in the steam. Audio recording failed. No known wildlife in
+        vicinity.</p>
+    </article><br>
+
+    <article class="log-entry">
+      <h2>Log #309 – Ranger Housing 2</h2>
+      <h3>Report by Agent Pines</h3>
+      <p>String of Christmas lights ignited one by one, forming the shape of a flame. Circuit breaker unaffected.
+        Archive as <span class="redacted" id="LightShape">█████</span>.</p>
+    </article><br>
+
+    <article class="log-entry">
+      <h2>Log #310 – Old Faithful Observation Deck</h2>
+      <h3>Report by Agent Wren</h3>
+      <p>Steam vent illuminated by unexplained orange glow. Agent’s glasses fogged in Morse code: <span class="redacted"
+          id="MorseCodeFog">█████</span>.</p>
+    </article><br>
+
+    <article class="log-entry">
+      <h2>Log #311 – Lava Creek Bridge</h2>
+      <h3>Report by Agent Drift</h3>
+      <p>Bridge rails briefly too hot to touch, despite 26°F air temp. No source found. Incident lasted exactly seven
+        minutes.</p>
+    </article><br>
+
+    <article class="log-entry">
+      <h2>Log #312 – Cache 6B</h2>
+      <h3>Report by Agent Ember</h3>
+      <p>Cache lock refused to open until Psalm 121 recited. Lock cooled instantly. Key glowed faintly for hours after.
+      </p>
+    </article><br>
+
+    <article class="log-entry">
+      <h2>Log #313 – Mammoth Chapel Choir Loft</h2>
+      <h3>Report by Agent Pines</h3>
+      <p>Choir robes hung themselves in perfect order. Faint scent of campfire lingered for three days. No fire reported
+        in area.</p>
+    </article><br>
+
+    <article class="log-entry">
+      <h2>Log #314 – Lone Star Geyser</h2>
+      <h3>Report by Agent Wren</h3>
+      <p>Steam from geyser formed flame-shaped shadow at noon. Shadow appeared even on cloudy day. <span
+          class="redacted" id="ShadowFigure">█████</span> observed by three agents.</p>
+    </article><br>
+
+    <article class="log-entry">
+      <h2>Log #315 – Firehole Lake Drive</h2>
+      <h3>Report by Agent Drift</h3>
+      <p>All vehicle dashboard clocks reset to 7:07 pm. Radios played static with faint hymn in background. Phenomenon
+        lasted until dusk.</p>
+    </article><br>
+
+    <article class="log-entry">
+      <h2>Log #316 – Lamar Valley Outlook</h2>
+      <h3>Report by Agent Ember</h3>
+      <p>Field lantern lit itself. Flame blue, emitted faint bell sound. Flame extinguished when lantern closed. Device
+        checks normal.</p>
+    </article><br>
+
+    <article class="log-entry">
+      <h2>Log #317 – Staff Laundry Room</h2>
+      <h3>Report by Agent Pines</h3>
+      <p>Dryer produced smell of pine and cinnamon. Static sparks formed the shape of Unit 7-B sigil. Socks remained
+        mysteriously missing.</p>
+    </article><br>
+
+    <article class="log-entry">
+      <h2>Log #318 – Black Sand Pool</h2>
+      <h3>Report by Agent Wren</h3>
+      <p>Frog chorus altered pitch to match agent’s singing of Psalm 40. Pool reflected orange light for 13 seconds.</p>
+    </article><br>
+
+    <article class="log-entry">
+      <h2>Log #319 – Tower Store Rooftop</h2>
+      <h3>Report by Agent Drift</h3>
+      <p>Crow perched on weather vane during rainstorm. Crow’s eyes glowed faint orange. Entry archived as <span
+          class="redacted" id="CrowEyes">█████</span>.</p>
+    </article><br>
+
+    <article class="log-entry">
+      <h2>Log #320 – Pelican Creek Fire Ring</h2>
+      <h3>Report by Agent Ember</h3>
+      <p>Campfire ring filled with cold embers. Emberlight shimmered when agent attempted to light kindling. No flame
+        produced.</p>
+    </article><br>
+
+    <article class="log-entry">
+      <h2>Log #321 – Norris Museum</h2>
+      <h3>Report by Agent Pines</h3>
+      <p>Fire alarm triggered by invisible smoke. Exhibit displays rearranged in spiral. Only item unaffected: Psalmic
+        artifact <span class="redacted" id="Artifact9">#9</span>.</p>
+    </article><br>
+
+    <article class="log-entry">
+      <h2>Log #322 – Cache Marker 11C</h2>
+      <h3>Report by Agent Wren</h3>
+      <p>Marker surrounded by circle of stones, each warm to touch. Moss inside circle glowed faintly until sunrise.</p>
+    </article><br>
+
+    <article class="log-entry">
+      <h2>Log #323 – West Entrance Gate</h2>
+      <h3>Report by Agent Drift</h3>
+      <p>Visitor badge printer jammed. Unjammed itself, produced badge labeled <span class="redacted"
+          id="VisitorName">EMBERLIGHT</span>. Badge vanished after 20 minutes.</p>
+    </article><br>
+
+    <article class="log-entry">
+      <h2>Log #324 – Artist Point Overlook</h2>
+      <h3>Report by Agent Ember</h3>
+      <p>Agents’ cameras captured photos tinted orange. Digital files time-stamped “7:07:07.” Manual watches unaffected.
+      </p>
+    </article><br>
+
+    <article class="log-entry">
+      <h2>Log #325 – Wolf Lake Patrol Route</h2>
+      <h3>Report by Agent Pines</h3>
+      <p>Fog along route pulsed with faint orange glow in rhythm with agent’s steps. Heart rate monitor failed to record
+        data.</p>
+    </article><br>
+
+    <article class="log-entry">
+      <h2>Log #326 – Cache 8A</h2>
+      <h3>Report by Agent Wren</h3>
+      <p>Cache lid too hot to touch, but thermometer read 32°F. Glove melted on contact. Cache contents: unharmed.</p>
+    </article><br>
+
+    <article class="log-entry">
+      <h2>Log #327 – Chapel Field</h2>
+      <h3>Report by Agent Drift</h3>
+      <p>Wildflowers glowed faintly at midnight. Circle pattern matched diagram from Psalmic appendix. Entry redacted
+        for review.</p>
+    </article><br>
+
+    <article class="log-entry">
+      <h2>Log #328 – Firewood Shed</h2>
+      <h3>Report by Agent Ember</h3>
+      <p>Stack of logs spontaneously arranged in Unit 7-B sigil. Splinters produced soft, musical tones when disturbed.
+      </p>
+    </article><br>
+
+    <article class="log-entry">
+      <h2>Log #329 – Buffalo Ford</h2>
+      <h3>Report by Agent Pines</h3>
+      <p>Bridge deck flickered with orange light as herd crossed. Agents reported hearing faint chanting—audio not
+        recorded.</p>
+    </article><br>
+
+    <article class="log-entry">
+      <h2>Log #330 – Geyser Basin Office</h2>
+      <h3>Report by Agent Wren</h3>
+      <p>Printer produced single page reading: <span class="redacted" id="PrinterPhrase">IT WAITS IN THE FIRE</span>.
+        Printer powered off at time of print.</p>
+    </article><br>
+
+    <article class="log-entry">
+      <h2>Log #331 – Observation Bunker</h2>
+      <h3>Report by Agent Drift</h3>
+      <p>Security camera feed glitched, displayed static with “PSALM 46” flashing intermittently. No intruders detected.
+      </p>
+    </article><br>
+
+    <article class="log-entry">
+      <h2>Log #332 – Gallatin Range</h2>
+      <h3>Report by Agent Ember</h3>
+      <p>Cloud to cloud lightning traced perfect spiral. Spiral lingered for full minute. Photos overexposed.</p>
+    </article><br>
+
+    <article class="log-entry">
+      <h2>Log #333 – Mammoth Map Room</h2>
+      <h3>Report by Agent Pines</h3>
+      <p>Pushpins rearranged themselves overnight, forming shape of flame. Map burned faintly at pin locations.</p>
+    </article><br>
+
+    <article class="log-entry">
+      <h2>Log #334 – South Entrance Cabin</h2>
+      <h3>Report by Agent Wren</h3>
+      <p>Agent found breakfast toast with perfect flame-shaped scorch. Peanut butter applied in spiral. Archive as <span
+          class="redacted" id="BreakfastCode">█████</span>.</p>
+    </article><br>
+
+    <article class="log-entry">
+      <h2>Log #335 – Backcountry Cabin 3</h2>
+      <h3>Report by Agent Drift</h3>
+      <p>Chimney emitted cool air with faint smell of incense. Logs inside burned from the center outward. No smoke
+        detected.</p>
+    </article><br>
+
+    <article class="log-entry">
+      <h2>Log #336 – Eagle Peak Summit</h2>
+      <h3>Report by Agent Ember</h3>
+      <p>Sunrise produced double shadow of agent—one moved independently. Both shadows merged after Psalm recitation.
+      </p>
+    </article><br>
+
+    <article class="log-entry">
+      <h2>Log #337 – Yellowstone Lake Dock</h2>
+      <h3>Report by Agent Pines</h3>
+      <p>Lake mist illuminated with deep orange glow at 4:04 am. Mist dissipated instantly when agent approached.</p>
+    </article><br>
+
+    <article class="log-entry">
+      <h2>Log #338 – Dunraven Pass</h2>
+      <h3>Report by Agent Wren</h3>
+      <p>Roadside stone cross shimmered at sunset. Shadow cast eastward despite setting sun. No electrical sources
+        found.</p>
+    </article><br>
+
+    <article class="log-entry">
+      <h2>Log #339 – Pebble Creek Firepit</h2>
+      <h3>Report by Agent Drift</h3>
+      <p>Coals produced sweet aroma, changed color to blue, then orange. Lasted only while Psalm 67 was sung.</p>
+    </article><br>
+
+    <article class="log-entry">
+      <h2>Log #340 – Chapel Sanctuary</h2>
+      <h3>Report by Agent Ember</h3>
+      <p>Candles flickered in time with bell toll. Flicker increased in intensity until all went out at once. Room
+        temperature unchanged.</p>
+    </article><br>
+
+    <article class="log-entry">
+      <h2>Log #341 – Cache 4D</h2>
+      <h3>Report by Agent Pines</h3>
+      <p>Cache contents fused together with no apparent heat. Separation attempt failed until Psalm 51 recited. Items
+        unharmed.</p>
+    </article><br>
+
+    <article class="log-entry">
+      <h2>Log #342 – Grand Canyon Overlook</h2>
+      <h3>Report by Agent Wren</h3>
+      <p>Orange sparks seen floating up from river, against wind. Sparks disappeared on video playback, but can be heard
+        as faint bells.</p>
+    </article><br>
+
+    <article class="log-entry">
+      <h2>Log #343 – Backcountry Trail 7B</h2>
+      <h3>Report by Agent Drift</h3>
+      <p>All trail reflectors glowed orange simultaneously at 2:22 am. Color persisted for seven minutes. Nearby cache
+        registered temperature spike.</p>
+    </article><br>
+
+    <article class="log-entry">
+      <h2>Log #344 – Old Faithful Chapel Storage</h2>
+      <h3>Report by Agent Ember</h3>
+      <p>All hymnals arranged into spiral pattern overnight. Spiral glowed when Psalm 133 was recited. No witnesses.</p>
+    </article><br>
+
+    <article class="log-entry">
+      <h2>Log #345 – Mud Volcano Trail</h2>
+      <h3>Report by Agent Pines</h3>
+      <p>Steam vent produced only cold mist. Agent’s breath visible in orange for duration of observation.</p>
+    </article><br>
+
+    <article class="log-entry">
+      <h2>Log #346 – Hayden Valley</h2>
+      <h3>Report by Agent Wren</h3>
+      <p>Campfire burned in reverse—flames retreated into logs. Event ended with loud chime from nowhere.</p>
+    </article><br>
+
+    <article class="log-entry">
+      <h2>Log #347 – Lake Lodge Guestroom</h2>
+      <h3>Report by Agent Drift</h3>
+      <p>Room lights flickered in the pattern of Morse code: <span class="redacted" id="RoomCode">A-7B-4</span>. Pattern
+        matched cache access log.</p>
+    </article><br>
+
+    <article class="log-entry">
+      <h2>Log #348 – Canyon EDR</h2>
+      <h3>Report by Agent Ember</h3>
+      <p>Oven preheated itself to exactly 777°F. Oven off on arrival. Oven thermometer later missing.</p>
+    </article><br>
+
+    <article class="log-entry">
+      <h2>Log #349 – Boardwalk Restroom</h2>
+      <h3>Report by Agent Pines</h3>
+      <p>Paper towel dispenser produced only one towel with flame watermark. Towel disintegrated when touched by second
+        agent.</p>
+    </article><br>
+
+    <article class="log-entry">
+      <h2>Log #350 – Staff Kitchen</h2>
+      <h3>Report by Agent Wren</h3>
+      <p>Pot of water began to simmer. No stove or heat source found. Pot cool to touch, water remained warm for hours.
+      </p>
+    </article><br>
+
+  </main>
+  <div class="log-feed-wrapper">
+    <div class="log-label">
+      <span class="live-dot"></span>Live Feed:
+    </div>
+    <div class="log-feed scanlines">
+      <div id="log-entry" class="typing"></div>
+    </div>
+  </div>
+  </div>
+  <script src="/js/agentFeed.js"></script>
+  <script src="/js/adjustPadding.js"></script>
+  <script src="/js/subLogsReveal.js"></script>
+  <svg style="display: none;">
+    <filter id="wave">
+      <feTurbulence type="turbulence" baseFrequency="0.003 0.08" numOctaves="1" result="turbulence" />
+      <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="4" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+  </svg>
+</body>
+
+</html>
