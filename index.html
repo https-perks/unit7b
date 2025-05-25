@@ -35,8 +35,15 @@
     <br>
     <a href="/landing.html" class="btn">Proceed</a>
   </div>
+        <script src="/js/scanlines.js"></script>
+        <svg style="display: none;">
+            <filter id="wave">
+                <feTurbulence type="turbulence" baseFrequency="0.003 0.08" numOctaves="1" result="turbulence" />
+                <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="4" xChannelSelector="R"
+                    yChannelSelector="G" />
+            </filter>
+        </svg>
+    </body>
 </body>
-
-
 
 </html>

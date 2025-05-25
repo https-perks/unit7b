@@ -58,12 +58,19 @@
     <div class="log-label">
       <span class="live-dot"></span>Live Feed:
     </div>
-    <div class="log-feed">
+    <div class="log-feed scanlines">
       <div id="log-entry" class="typing"></div>
     </div>
   </div>
-    <script src="/js/agentFeed.js"></script>
-    <script src="/js/adjustPadding.js"></script>
+  </div>
+  <script src="/js/agentFeed.js"></script>
+  <script src="/js/adjustPadding.js"></script>
+  <svg style="display: none;">
+    <filter id="wave">
+      <feTurbulence type="turbulence" baseFrequency="0.003 0.08" numOctaves="1" result="turbulence" />
+      <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="4" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+  </svg>
 </body>
 
 </html>

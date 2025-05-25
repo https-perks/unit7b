@@ -402,6 +402,240 @@ body.main::after {
   transform: translateY(-2px);
 }
 
+/* ========== Glitching Text ========== */
+.glitch-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.glitch-text {
+  position: relative;
+  display: inline-block;
+  font-family: 'OCR A Std', monospace;
+  color: #e3f5e3;
+  mix-blend-mode: hard-light;
+  font-size: clamp(1.5rem, 2vw + 1rem, 2.5rem);
+  letter-spacing: 0.05em;
+  animation:
+    glitch-flicker 2s infinite,
+    glitch-invert 6s infinite;
+  text-align: center;
+}
+
+.glitch-text::before,
+.glitch-text::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 1;
+  mix-blend-mode: screen;
+  text-align: center;
+  pointer-events: none;
+}
+
+.glitch-text::before {
+  animation:
+    glitch-top 2s infinite linear alternate-reverse,
+    glitch-invert-alt 7s infinite;
+  color: #ff4444;
+}
+
+.glitch-text::after {
+  animation:
+    glitch-bottom 2s infinite linear alternate-reverse,
+    glitch-invert-ghost 5s infinite;
+  color: #44ffff;
+}
+
+.glitch-text span {
+  display: inline-block;
+  animation: jitter 0.25s infinite ease-in-out alternate;
+}
+
+@keyframes jitter {
+  from { transform: translate(0, 0); }
+  to { transform: translate(0.5px, -0.5px); }
+}
+
+/* Flicker + shake */
+@keyframes glitch-flicker {
+  0%, 100% { opacity: 1; transform: translate(0, 0); }
+  7%  { opacity: 0.8; transform: translate(-1px, 0.5px); }
+  14% { opacity: 0.6; transform: translate(1px, -0.5px); }
+  21% { opacity: 1; }
+  35% { opacity: 0.9; transform: scale(1.01); }
+  50% { opacity: 0.7; transform: translate(0, 0.5px); }
+  64% { opacity: 0.5; transform: translate(-0.5px, 0); }
+  75% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes glitch-top {
+  0%   { transform: translate(-2px, -2px); }
+  20%  { transform: translate(2px, 0); }
+  40%  { transform: translate(1px, 1px); }
+  60%  { transform: translate(0, -2px); }
+  80%  { transform: translate(-1px, 1px); }
+  100% { transform: translate(0, 0); }
+}
+
+@keyframes glitch-bottom {
+  0%   { transform: translate(2px, 2px); }
+  20%  { transform: translate(-2px, 0); }
+  40%  { transform: translate(0, 2px); }
+  60%  { transform: translate(2px, -1px); }
+  80%  { transform: translate(-1px, -1px); }
+  100% { transform: translate(0, 0); }
+}
+
+@keyframes glitch-invert {
+  0%, 90%, 100% { filter: none; }
+  92%, 96%     { filter: invert(1) hue-rotate(180deg); }
+  94%, 98%     { filter: none; }
+}
+
+@keyframes glitch-invert-alt {
+  0%, 85%, 100% { filter: none; }
+  87%, 91%      { filter: invert(1) hue-rotate(90deg); }
+  89%, 93%      { filter: none; }
+}
+
+@keyframes glitch-invert-ghost {
+  0%, 80%, 100% { filter: none; }
+  82%, 86%      { filter: invert(1) hue-rotate(270deg); }
+  84%, 88%      { filter: none; }
+}
+
+.glitch-text {
+  text-shadow:
+    0 0 2px rgba(255, 255, 255, 0.863),
+    0 0 4px rgba(68, 255, 255, 1),
+    0 0 8px rgba(255, 68, 68, 0.5);
+}
+
+.scanlines {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.scanlines::before,
+.scanlines::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+  z-index: 2;
+}
+
+.scanlines::before {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.15),
+    rgba(255,255,255,0.15) 3px,
+    transparent 3px,
+    transparent 5px
+  );
+  z-index: 9999;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+
+  animation-name: scanline-shift, scan-flicker, analog-jitter;
+  animation-duration: 2s, 1.5s, 9s;
+  animation-timing-function: linear, ease-in-out, steps(1);
+  animation-iteration-count: infinite;
+  filter: url(#wave);
+}
+
+.scanlines::after {
+  z-index: 9998;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.15) 2px,
+    transparent 4px
+  );
+}
+
+
+/*Scanlines for the whole screen*/
+.scanlines-before,
+.scanlines-after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 10;
+  mix-blend-mode: overlay;
+}
+
+.scanlines-before {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.25),
+    rgba(255,255,255,0.25) 2px,
+    transparent 2px,
+    transparent 4px
+  );
+  z-index: 9999;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+
+  animation-name: scanline-shift, scan-flicker, analog-jitter;
+  animation-duration: 2s, 1.5s, 9s;
+  animation-timing-function: linear, ease-in-out, steps(1);
+  animation-iteration-count: infinite;
+  filter: url(#wave);
+}
+
+.scanlines-after {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9998;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.05) 2px,
+    transparent 4px
+  );
+}
+
+@keyframes scanline-shift {
+  0% { background-position-y: 0; }
+  100% { background-position-y: 40px; }
+}
+
+@keyframes scan-flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.94; }
+}
+
+@keyframes analog-jitter {
+  0%, 100% { transform: none; }
+  5% { transform: translateY(-2px) scaleX(1.02); }
+  6% { transform: translateY(2px) scaleX(0.98); }
+  7% { transform: none; }
+}
 
 
 /* ========== Utility ========== */
@@ -504,3 +738,5 @@ body.main::after {
     opacity: 1;
   }
 }
+
+
