@@ -38,6 +38,12 @@ img {
   -webkit-mask-image: linear-gradient(to bottom, black 97%, transparent 100%);
 }
 
+@media (max-width: 750px) {
+  .content-viewport {
+    height: 81vh;
+  }
+}
+
 .content-viewport::-webkit-scrollbar {
   display: none;
   /* WebKit (Chrome, Safari) */
@@ -741,6 +747,12 @@ audio {
   /* allows background interactions unless overridden inside */
 }
 
+@media (max-width: 750px) {
+  .log-feed-wrapper {
+    height: 18vh;
+  }
+}
+
 .log-label {
   font-family: 'OCR A Std', monospace;
   font-size: 2rem;
@@ -783,6 +795,13 @@ audio {
   color: #d0c6b4;
   font-family: 'OCR A Std', monospace;
   font-size: 0.9rem;
+}
+
+@media (max-width: 750px) {
+  #log-entry {
+    font-size: 0.7rem;
+    padding: 0.5rem 1rem;
+  }
 }
 
 .cursor {
