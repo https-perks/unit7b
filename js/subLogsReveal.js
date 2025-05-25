@@ -238,12 +238,12 @@ function revealLostAgentLogs() {
 
   const lostAgentLogMap = {
     "lostagent-status": "Lost Agent logs updated. Clearance validated.",
-    "Director": "Director Pines",
-    "GoneToGround": "Gone to ground",
-    "DontLookBack": "don’t look back",
-    "FindTheEggs": "Find the eggs before dawn",
+    "Director": "Former Director Caldera",
+    "GoneToGround": "Where'd my last pinecone go?",
+    "DontLookBack": "Don’t look back",
+    "FindTheEggs": "is in the riddle, not the journey.",
     "AwakeInSpring": "Awake in spring",
-    "TryAgainSoot": "Try again, Soot",
+    "TryAgainSoot": "the smoke that walks",
     "ImStillHere": "I’m still here",
     "UnderTheLog": "Under the log",
     "TakeTheBonePath": "Take the bone path",

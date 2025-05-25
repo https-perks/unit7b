@@ -712,6 +712,18 @@ audio {
   /* This inverts the colors for a dark look—try it! */
 }
 
+.big-break {
+  line-height: 5; /* Makes the line taller */
+  display: block;   /* Makes it behave more like a <div> */
+  content: "";
+  margin-top: 1em;  /* Adds extra space above */
+  margin-bottom: 1em; /* Adds extra space below */
+}
+
+.spacer {
+  height: 5em;  /* Adjust as needed */
+}
+
 /* ========== Log Entry Feed ========== */
 .log-feed-wrapper {
   position: fixed;
