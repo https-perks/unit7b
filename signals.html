@@ -27,6 +27,15 @@
 </head>
 
 <body class="main">
+  <section id="banner-wrapper" class="popup-wrapper">
+    <div id="intercept-banner" class="popup-banner" role="alert" aria-live="polite">
+      <button id="close-banner" aria-label="Dismiss warning">&times;</button>
+      <strong>UNIT 7-B // SIGNAL INTERCEPTS</strong>
+      <span>WARNING: Access to classified transmissions.<br>
+        Unauthorized decoding or dissemination is strictly prohibited.<br>
+        Agent activity is being monitored. Proceed with caution.</span>
+    </div>
+  </section>
   <header class="main-header">
     <div class="header-inner">
       <img src="/images/Sigil.png" alt="Sigil" class="header-sigil" />
@@ -53,6 +62,7 @@
   </header>
   <div class="content-viewport">
     <main class="container">
+
       <section style="text-align: center;">
         <h1 style="font-size: 2.5rem;">Signal Intercepts</h1>
         <p class="quote" style="font-size: 1.25rem;">Broadcasts. Distortions. Sacred Echo.</p>
@@ -86,6 +96,7 @@
   <script src="/js/agentFeed.js"></script>
   <script src="/js/adjustPadding.js"></script>
   <script src="/js/scanlines.js"></script>
+  <script src="/js/popup-banner.js"></script>
   <svg style="display: none;">
     <filter id="wave">
       <feTurbulence type="turbulence" baseFrequency="0.003 0.08" numOctaves="1" result="turbulence" />
