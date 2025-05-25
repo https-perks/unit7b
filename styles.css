@@ -729,6 +729,12 @@ audio {
   /* allows background interactions unless overridden inside */
 }
 
+@media (max-width: 750px) {
+  .log-feed-wrapper {
+    height: 18vh;
+  }
+}
+
 .log-label {
   font-family: 'OCR A Std', monospace;
   font-size: 2rem;
@@ -771,6 +777,13 @@ audio {
   color: #d0c6b4;
   font-family: 'OCR A Std', monospace;
   font-size: 0.9rem;
+}
+
+@media (max-width: 750px) {
+  #log-entry {
+    font-size: 0.5rem;
+    padding: 0.5rem 1rem;
+  }
 }
 
 .cursor {
