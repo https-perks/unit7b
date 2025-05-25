@@ -86,7 +86,7 @@ const logEntries = [
   "My love language is someone covering my shift so I can cry by a geyser.",
   "This isn't just a job. It’s a legally binding canyon cult with mop buckets.",
   "Teamwork makes the scream work.",
-  "Sleep. Eat. Fold towels. Doubt God. Repeat.",
+  "Sleep. Eat. Fold towels. Repeat.",
   "At Xanterra, you’ll meet lifelong friends, eternal mosquitos, and the ghost of your ambitions.",
   "Sure, the views are amazing. So is the look in my eyes when I tell guests ‘the Wi-Fi is down.’",
 ];
