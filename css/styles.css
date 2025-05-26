@@ -206,7 +206,7 @@ body.proceed {
 
 /* ========== THEME: Main Content ========== */
 body.main {
-  background: #524a42 url('textures/topo-lines.webp') center/cover no-repeat fixed;
+  background: #524a42 url('/textures/topo-lines.webp') center/cover no-repeat fixed;
   background-blend-mode: overlay;
   color: #2f2b25;
   position: relative;
@@ -928,4 +928,162 @@ audio {
   }
 }
 
+.calendar-wrapper {
+  background: linear-gradient(135deg, #24292e 90%, #2d2546 100%);
+  border-radius: 1.25em;
+  box-shadow: 0 2px 20px #000a, 0 0 0 6px #ffd70033;
+  padding: 2em 1.5em 1.5em 1.5em;
+  width: calc(100% - 2rem);
+  max-width: 800px;
+  margin: 2em auto;
+  font-family: 'Roboto Mono', 'Fira Mono', monospace;
+  border: 2px solid #ffde81;
+  position: relative;
+  overflow: hidden;
+}
 
+.calendar-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: #1c2333;
+  padding: 0.75em 1em;
+  border-radius: 1em 1em 0 0;
+  border-bottom: 2px solid #ffd700;
+  color: #ffd700;
+  font-size: 1.1em;
+  letter-spacing: 0.05em;
+  box-shadow: 0 2px 6px #0002;
+  gap: .5em;
+  text-align: center;
+}
+
+.calendar-header .year {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 2em;
+}
+
+.calendar-header .calendar-title {
+  font-family: inherit;
+  font-size: 1.1em;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: #fffbe8;
+}
+
+.calendar-header .agent {
+  font-size: 0.95em;
+  color: #bbb;
+}
+
+.calendar-header .agent-name {
+  background: #333c52;
+  color: #ffeebc;
+  border-radius: 0.4em;
+  padding: 0 0.45em;
+  font-family: inherit;
+  letter-spacing: 0.07em;
+}
+
+.calendar-body {
+  background: #181f28;
+  border-radius: 0 0 1em 1em;
+  box-shadow: 0 1px 8px #0006 inset;
+  padding: 2em 1em 1em 1em;
+}
+
+.calendar-footer {
+  text-align: right;
+  font-size: 0.95em;
+  color: #ffeebc;
+  margin-top: 0.75em;
+  padding-right: 0.6em;
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 700px) {
+  .calendar-wrapper {
+    max-width: 98vw;
+    padding: 1em 0.2em 0.6em 0.2em;
+  }
+  .calendar-header, .calendar-footer, .calendar-body {
+    padding: 0.6em 0.5em;
+  }
+}
+
+/*Employee Portal*/
+.login-container {
+  max-width: 340px;
+  margin: 2.5rem auto;
+  padding: 2.5em 2em 1.5em 2em;
+  background: rgba(30, 27, 22, 0.98);
+  border-radius: 12px;
+  border: 1.5px solid #c2b283;
+  box-shadow: 0 2px 16px #0008;
+  color: #d9d4c5;
+  text-align: center;
+}
+
+.login-container h2 {
+  color: #ffd700;
+  font-size: 1.35em;
+  letter-spacing: 0.04em;
+  margin-bottom: 1.4em;
+}
+
+.login-container label {
+  color: #ffd700;
+  font-weight: 600;
+  font-size: 1em;
+  margin-bottom: 0.3em;
+  display: block;
+  text-align: left;
+  letter-spacing: 0.02em;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 0.65em 1em;
+  margin-bottom: 1.2em;
+  background: #181f28;
+  border: 1.2px solid #383129;
+  border-radius: 6px;
+  color: #ffde81;
+  font-size: 1em;
+  font-family: inherit;
+  box-shadow: none;
+  outline: none;
+}
+
+.login-container input:focus {
+  border-color: #ffd700;
+  background: #232019;
+}
+
+.login-container button {
+  width: 100%;
+  padding: 0.8em 1.5em;
+  border: 2px solid #ffd700;
+  border-radius: 0.55em;
+  background: #181f28;
+  color: #ffd700;
+  font-weight: bold;
+  font-size: 1.07em;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.login-container button:hover,
+.login-container button:focus {
+  background: #ffd700;
+  color: #181f28;
+}
+
+.login-container .error {
+  color: #ff5050;
+  min-height: 1.5em;
+  margin-bottom: 1em;
+  font-size: 0.98em;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unit 7-B | Online Archives</title>
+  <link rel="stylesheet" href="/css/agent-landing.css" />
+  <!-- OpenGraph for social preview -->
+  <meta property="og:title" content="Unit 7-B Archives" />
+  <meta property="og:description" content="Not gone. Just Watching" />
+  <meta property="og:image" content="https://unit7b.org/images/preview.jpg" />
+  <meta property="og:url" content="https://unit7b.org" />
+  <meta property="og:type" content="website" />
+  <!-- Twitter Card support -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Unit 7-B Archives">
+  <meta name="twitter:description" content="A scavenger hunt woven into Yellowstone's forgotten lore.">
+  <meta name="twitter:image" content="https://unit7b.org/images/preview.png">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/images/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/images/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="/images/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Unit 7-B" />
+  <link rel="manifest" href="/images/favicon/site.webmanifest" />
+</head>
+
+<body class="employee-landing">
+  <div class="portal-container">
+    <!-- Agent avatar and heading at the top -->
+    <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 1.7em;">
+      <span id="agent-avatar" class="portal-avatar" aria-hidden="true"></span>
+      <h1 id="welcome-heading" style="margin: 0; font-size: 2rem; text-align: left;"></h1>
+    </div>
+
+    <!-- Example Portal Navigation -->
+    <nav class="portal-nav">
+      <a href="/portal/employee-login/resources.html">Resources</a>
+      <a href="/portal/employee-login/logs.html">Logs</a>
+      <a href="/portal/employee-login/calendar.html">Calendar</a>
+      <a href="/portal.html">Return to Main Site</a>
+    </nav>
+
+    <!-- Example Portal Section -->
+    <div class="portal-card">
+      <h2 class="portal-section-title">Latest Announcements</h2>
+      <div class="portal-info">
+        Welcome to the Unit 7-B Employee Portal. New features and reports will appear here throughout the season!
+      </div>
+      <div class="portal-info">
+        <strong>Update 5/26/2025:</strong><br>
+        Today is activation day! Postcards will be placed on car windshields and preliminary manuals will be placed in
+        the teams' totes before they leave.<br>
+      </div>
+    </div>
+
+    <!-- Logout Button -->
+    <button id="logout-btn" onclick="logOut()">Log Out</button>
+  </div>
+  <footer class="progress-tracker-footer">
+    <section class="progress-tracker">
+      <h2 class="tracker-title">Operation Progress</h2>
+      <ol class="tracker-bar">
+        <li class="phase current">Phase 1<br><span>Activation</span></li>
+        <li class="phase">Phase 2<br><span>The Hunt Begins</span></li>
+        <li class="phase">Phase 3<br><span>Interference</span></li>
+        <li class="phase">Phase 4<br><span>Task Rabbit</span></li>
+        <li class="phase">Phase 5<br><span>The Lost Pages</span></li>
+        <li class="phase">Phase 6<br><span>Discovery</span></li>
+      </ol>
+    </section>
+  </footer>
+  <!-- Scripts -->
+  <script src="/js/employee-login.js"></script>
+  <script>personalizeWelcome();</script>
+</body>
+<script src="/js/adjustPadding.js"></script>
+<script src="/js/employee-login.js"></script>
+<script>personalizeWelcome();</script>
+</body>
+
+</html>

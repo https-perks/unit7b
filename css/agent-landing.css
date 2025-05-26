@@ -1,0 +1,294 @@
+/* EMPLOYEE PORTAL - Custom Styles */
+
+/* Body */
+body.employee-landing {
+  background: linear-gradient(115deg, #22283a 0%, #1e1b16 100%);
+background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: #ffe7a0;
+  font-family: 'Roboto Mono', 'OCR A Std', monospace, monospace;
+  letter-spacing: 0.03em;
+  margin: 0;
+  padding: 0;
+}
+
+/* Welcome Heading */
+#welcome-heading {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  color: #ffd863;
+  letter-spacing: 0.07em;
+  text-shadow: 0 2px 10px #0006;
+}
+
+/* Main Portal Container */
+.portal-container {
+  max-width: 800px;
+  margin: 2.5rem auto 0 auto;
+  padding: 2rem 2.5rem;
+  background: rgba(32, 29, 41, 0.96);
+  border-radius: 12px;
+  box-shadow: 0 8px 40px #0008;
+  border: 2px solid #ffd86333;
+  text-align: center;
+}
+
+/* Navigation Buttons/Links */
+.portal-nav {
+  margin: 2rem 0 1rem 0;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.portal-nav a, .portal-nav button {
+  background: #ffd863;
+  color: #272526;
+  border: none;
+  border-radius: 8px;
+  padding: 0.85em 2em;
+  font-size: 1.05rem;
+  font-weight: bold;
+  box-shadow: 0 3px 14px #0004;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+}
+.portal-nav a:hover, .portal-nav button:hover {
+  background: #181f28;
+  color: #ffd863;
+  box-shadow: 0 6px 24px #0007;
+}
+
+/* Custom Table Look */
+.portal-table {
+  margin: 2.5rem auto;
+  width: 95%;
+  background: #24202c;
+  border-radius: 8px;
+  box-shadow: 0 1px 9px #0004;
+  border-collapse: collapse;
+  color: #ffd863;
+}
+.portal-table th, .portal-table td {
+  padding: 0.75em 1em;
+  border-bottom: 1px solid #353238;
+}
+.portal-table th {
+  background: #29242e;
+  font-size: 1.08em;
+}
+.portal-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Logout Button */
+#logout-btn {
+  display: inline-block;
+  margin-top: 2.5rem;
+  background: #31291b;
+  color: #ffd863;
+  border: 2px solid #ffd863;
+  padding: 0.65em 2.1em;
+  font-size: 1.1em;
+  border-radius: 7px;
+  cursor: pointer;
+  font-family: inherit;
+  letter-spacing: 0.05em;
+  transition: background 0.14s, color 0.14s, border 0.14s;
+}
+#logout-btn:hover, #logout-btn:focus {
+  background: #ffd863;
+  color: #181f28;
+  border: 2px solid #181f28;
+}
+
+/* Add any additional portal-specific widgets here */
+
+/* Portal Display */
+.portal-section-title {
+  font-size: 1.35rem;
+  color: #ffd863;
+  margin: 2.5rem 0 1.25rem 0;
+  letter-spacing: 0.09em;
+  text-align: left;
+  border-bottom: 1px solid #ffd86333;
+  padding-bottom: 0.25em;
+}
+
+.portal-info, .portal-alert, .portal-success {
+  display: block;
+  margin: 1.5em auto;
+  padding: 1.1em 1.5em;
+  border-radius: 7px;
+  font-size: 1.05em;
+  max-width: 700px;
+  text-align: left;
+}
+.portal-info {
+  background: rgba(34, 36, 58, 0.467);
+  color: #ffd863;
+  border-left: 5px solid #ffd863;
+}
+.portal-alert {
+  background: #412a2a99;
+  color: #ff9090;
+  border-left: 5px solid #ff5050;
+}
+.portal-success {
+  background: #233a2295;
+  color: #d7ffb6;
+  border-left: 5px solid #a0ff63;
+}
+
+@keyframes portal-fadein {
+  from { opacity: 0; transform: translateY(40px);}
+  to   { opacity: 1; transform: none;}
+}
+.portal-container, #welcome-heading {
+  animation: portal-fadein 0.85s cubic-bezier(.32,.72,.41,1.11);
+}
+
+.portal-card {
+  background: #2b2736;
+  border-radius: 9px;
+  padding: 1.2em 2em;
+  margin: 1.5em 0;
+  box-shadow: 0 2px 10px #0005;
+  color: #ffd863;
+}
+
+.portal-avatar {
+  display: inline-block;
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  background: #ffd863;
+  color: #24202c;
+  font-size: 1.55em;
+  font-weight: bold;
+  line-height: 48px;
+  text-align: center;
+  margin-right: 0.6em;
+  box-shadow: 0 2px 6px #0006;
+  vertical-align: middle;
+}
+
+.portal-avatar-img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: inline-block;
+  box-shadow: 0 2px 6px #0006;
+  vertical-align: middle;
+  transform: translateY(-2px);
+}
+
+/* Progress Tracker */
+.progress-tracker-footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  z-index: 1020;
+  background: transparent;
+  pointer-events: none; /* Let clicks pass through by default */
+}
+
+.progress-tracker {
+  margin: 2.5em auto 2em auto;
+  max-width: 800px;
+  background: #23202b;
+  padding: 1.5em 2em 2.1em 2em;
+  border-radius: 10px;
+  box-shadow: 0 4px 18px #0007;
+  border: 1.5px solid #ffd86355;
+}
+
+.tracker-title {
+  text-align: center;
+  font-size: 1.25rem;
+  color: #ffd863;
+  letter-spacing: 0.09em;
+  margin-bottom: 1.2em;
+}
+
+.tracker-bar {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  counter-reset: phase;
+}
+
+.tracker-bar .phase {
+  flex: 1 1 0;
+  text-align: center;
+  position: relative;
+  font-size: 0.97em;
+  color: #fff4cb;
+  opacity: 0.66;
+  padding-bottom: 0.2em;
+}
+
+.tracker-bar .phase::before {
+  content: '';
+  display: block;
+  margin: 0 auto 0.3em auto;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid #ffd86377;
+  background: #23202b;
+  box-shadow: 0 1px 7px #0004;
+  transition: background 0.3s, border 0.3s;
+}
+
+.tracker-bar .phase.completed,
+.tracker-bar .phase.current {
+  color: #ffd863;
+  opacity: 1;
+}
+
+.tracker-bar .phase.completed::before {
+  background: #ffd863;
+  border: 2px solid #ffd863;
+  content: '✓';
+  color: #23202b;
+  font-weight: bold;
+  font-size: 1.1em;
+  line-height: 24px;
+  text-align: center;
+}
+
+.tracker-bar .phase.current::before {
+  background: #ffde816e;
+  border: 2px solid #ffd863;
+  content: '';
+}
+
+.tracker-bar .phase:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 13px;
+  left: 50%;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #ffd86399 0%, #ffe7a022 100%);
+  z-index: 0;
+  transform: translateX(10%);
+}
+
+.tracker-bar .phase span {
+  display: block;
+  font-size: 0.95em;
+  color: #d9c388;
+  margin-top: 0.2em;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}

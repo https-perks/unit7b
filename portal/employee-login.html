@@ -28,22 +28,28 @@
 
 <body class="proceed">
   <img src="/images/Sigil.png" alt="Unit 7-B Sigil" class="sigil">
-  <div class="container">
-    <h1 class="top-secret">Top Secret // Unit 7-B</h1>
-    <p class="quote">“The Cache was never buried. Only forgotten.”</p>
-    <p>Proceed only if you are marked.</p>
-    <br>
-    <a href="/landing.html" class="btn">Proceed</a>
-  </div>
-        <script src="/js/scanlines.js"></script>
-        <svg style="display: none;">
-            <filter id="wave">
-                <feTurbulence type="turbulence" baseFrequency="0.003 0.08" numOctaves="1" result="turbulence" />
-                <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="4" xChannelSelector="R"
-                    yChannelSelector="G" />
-            </filter>
-        </svg>
-    </body>
+  <form class="login-container" id="login-form" autocomplete="off">
+    <h2>Employee Log In</h2>
+    <div>
+      <label for="username">Username:</label>
+      <input id="username" type="text" name="username" required autocomplete="off" autofocus>
+    </div>
+    <div>
+      <label for="password">Password:</label>
+      <input id="password" type="password" name="password" required>
+    </div>
+    <div class="error" id="error-message"></div>
+    <button type="submit">Log In</button>
+  </form>
+  <script src="/js/scanlines.js"></script>
+  <script src="/js/employee-login.js"></script>
+  <svg style="display: none;">
+    <filter id="wave">
+      <feTurbulence type="turbulence" baseFrequency="0.003 0.08" numOctaves="1" result="turbulence" />
+      <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="4" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+  </svg>
+</body>
 </body>
 
 </html>
