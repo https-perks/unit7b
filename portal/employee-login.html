@@ -26,10 +26,15 @@
   <link rel="manifest" href="/images/favicon/site.webmanifest" />
 </head>
 
-<body class="proceed">
-  <img src="/images/Sigil.png" alt="Unit 7-B Sigil" class="sigil">
+<body class="employee-login">
+  <a href="/landing.html" aria-label="Return to main landing page"><img src="/images/Sigil.png" alt="Unit 7-B Sigil"
+      class="sigil" style="scale: 90%;"></a>
+  <section style="text-align: center; padding-bottom: 0;">
+    <p class="quote" style="font-size: 1.25rem; padding-bottom: 0;">If you do not belong here, click the sigil to
+      return.</p>
+  </section>
   <form class="login-container" id="login-form" autocomplete="off">
-    <h2>Employee Log In</h2>
+    <h2>Agent Log In</h2>
     <div>
       <label for="username">Username:</label>
       <input id="username" type="text" name="username" required autocomplete="off" autofocus>
@@ -41,14 +46,7 @@
     <div class="error" id="error-message"></div>
     <button type="submit">Log In</button>
   </form>
-  <script src="/js/scanlines.js"></script>
   <script src="/js/employee-login.js"></script>
-  <svg style="display: none;">
-    <filter id="wave">
-      <feTurbulence type="turbulence" baseFrequency="0.003 0.08" numOctaves="1" result="turbulence" />
-      <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="4" xChannelSelector="R" yChannelSelector="G" />
-    </filter>
-  </svg>
 </body>
 </body>
 

@@ -27,6 +27,7 @@
 </head>
 
 <body class="employee-landing">
+  <div id="page-blur-overlay"></div>
   <div class="portal-container">
     <!-- Agent avatar and heading at the top -->
     <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 1.7em;">
@@ -77,6 +78,23 @@
 </body>
 <script src="/js/adjustPadding.js"></script>
 <script src="/js/employee-login.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Run protectPage() FIRST so unauthorized users get kicked
+    protectPage();
+
+    // Then fade out overlay
+    setTimeout(function () {
+      let overlay = document.getElementById('page-blur-overlay');
+      if (overlay) overlay.classList.add('hide');
+      // Optional: Remove it entirely after fade (for accessibility)
+      setTimeout(function () {
+        if (overlay) overlay.parentNode.removeChild(overlay);
+      }, 2200);
+    }, 200); // Small delay before starting fade, adjust as needed
+  });
+
+</script>
 <script>personalizeWelcome();</script>
 </body>
 
