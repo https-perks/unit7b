@@ -313,3 +313,31 @@ body.employee-landing {
   pointer-events: none;
   transition: opacity 2s cubic-bezier(.6,.3,.23,1.15);
 }
+
+.portal-main-scroll {
+  position: relative;
+  margin: auto;
+  padding: 0 0 2rem 0;
+  overflow-y: auto;
+  height: 78vh;
+  mask-image: linear-gradient(to bottom, black 97%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 97%, transparent 100%);
+}
+
+@media (max-width: 830px) {
+  .portal-main-scroll {
+    height: 75vh;
+  }
+}
+
+@media (max-width: 300px) {
+  .portal-main-scroll {
+    height: 72vh;
+  }
+}
+
+/* Ensure body/page never scrolls (only the main scroll does) */
+body.employee-landing, html {
+  overflow: hidden !important;
+  height: 100vh;
+}
