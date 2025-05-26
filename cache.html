@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unit 7-B | The Cache</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+  <!-- OpenGraph for social preview -->
+  <meta property="og:title" content="Unit 7-B | The Cache" />
+  <meta property="og:description" content="Official cache access. Authorized clearance required." />
+  <meta property="og:image" content="https://unit7b.org/images/preview.jpg" />
+  <meta property="og:url" content="https://unit7b.org/cache.html" />
+  <meta property="og:type" content="website" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/images/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/images/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="/images/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png" />
+</head>
+
+<body class="main">
+  <header class="main-header">
+    <div class="header-inner">
+      <img src="/images/Sigil.png" alt="Sigil" class="header-sigil" />
+      <div class="header-text-group">
+        <h1 class="header-title">The Cache</h1>
+        <p class="header-quote">Coordinates obscured. “The Cache is not what you think.”</p>
+      </div>
+      <nav class="header-nav">
+        <a href="/landing.html">Home</a>
+        <a href="/manual.html">Manual</a>
+        <a href="/logs.html">Logs</a>
+        <a href="/portal.html">Access</a>
+        <a href="/agents.html">Agents</a>
+      </nav>
+    </div>
+    <div class="ticker-wrap">
+      <div class="ticker">
+        <p>
+          Phase: Discovery &nbsp;&nbsp; |&nbsp;&nbsp; Caches secured: 3/7 &nbsp;&nbsp; |&nbsp;&nbsp;
+          Unverified coordinates detected. &nbsp;&nbsp; |&nbsp;&nbsp; "Do not mimic the flame."
+        </p>
+      </div>
+    </div>
+  </header>
+  <div class="content-viewport">
+    <main class="container">
+
+      <section style="text-align: center;">
+        <h1 style="font-size: 2.2rem;">CACHE ACCESS: AUTHORIZED EYES ONLY</h1>
+        <p class="quote" style="font-size: 1.1rem;">“Some caches are objects. Some are moments. Most are hidden twice.”</p>
+      </section>
+
+      <!-- Coded Clues & Hints Section -->
+      <section>
+        <h2>Current Clues</h2>
+        <ul style="padding-left: 1em; list-style-type: square;">
+          <li>
+            <span class="redacted" data-tooltip="Clearance Marmot required">Your mom's house: <span class="decrypting">[LOCKED]</span></span>
+          </li>
+          <li>
+            Field Code Fragment found at Site Alpha. <span style="color:#0050ac;">Decoded:</span> <code>VL2R-37P9-XF8J</code>
+          </li>
+          <li>
+            Cache 07 is humming again. Location: "<span class="redacted">The stone is split</span>," the flame repeats.
+          </li>
+          <li>
+            New: Raccoon tracks observed at <span class="decrypting">[REDACTED]</span>.
+          </li>
+        </ul>
+      </section>
+      <br>
+
+      <!-- Puzzle Drops Section -->
+      <section>
+        <h2>Declassified Drops</h2>
+          <strong style="font-size:1.1em;">Fragment: Bear Mail #1</strong>
+          <p>
+            A burned corner, a partial map. <br>
+            <span class="decrypting">Bear Mail Confirms: The time has come.<br>
+            Your paws have been deemed worthy.<br>
+            First contact will begin on...</span><br>
+            <span class="redacted">[Full message requires Elk-level clearance]</span>
+          </p>
+          <strong style="font-size:1.1em;">Scan: QR #LAVACREEK</strong>
+          <p>
+            Embedded codeword: <span style="font-family:monospace; color:#ffe7a0;">EMBERLIGHT</span>
+          </p>
+      </section>
+      <br>
+
+      <!-- Anomalous Incidents Section -->
+      <section>
+        <h2>Recent Anomalies</h2>
+        <ul style="padding-left: 1rem;">
+          <li>Cache Alpha glowed faintly at moonrise.</li>
+          <li>Unauthorized singing detected. Harmonics not matching any agent vocal signature.</li>
+          <li>Fire ring at Canyon found rearranged at dawn.</li>
+          <li>Manual fragment disintegrated upon sunlight exposure.</li>
+        </ul>
+      </section>
+      <br>
+
+      <!-- Redacted / Unlocked Lore -->
+      <section>
+        <h2>Redacted Lore</h2>
+          <p><span class="redacted">This fragment is classified. Return with a “Cache Marker” to reveal.</span></p>
+          <p>
+            <span style="font-style: italic; color:#ffde81;">Rumor:</span>
+            It’s said the Cache moves each night, but the flame always points true north.
+          </p>
+      </section>
+      <br>
+
+      <!-- Diegetic Warnings and Footer -->
+      <section style="text-align:center;">
+        <p class="quote" style="font-size:1.07em;">If you are reading this, you have already left a trace.<br> Do not trust the next code you receive. Not all are meant for you.</p>
+      </section>
+    </main>
+  </div>
+
+  <!-- Live Feed Footer -->
+  <div class="log-feed-wrapper">
+    <div class="log-label">
+      <span class="live-dot"></span>Live Feed:
+    </div>
+    <div class="log-feed scanlines">
+      <div id="log-entry" class="typing"></div>
+    </div>
+  </div>
+
+  <script src="/js/agentFeed.js"></script>
+  <script src="/js/adjustPadding.js"></script>
+  <svg style="display: none;">
+    <filter id="wave">
+      <feTurbulence type="turbulence" baseFrequency="0.003 0.08" numOctaves="1" result="turbulence" />
+      <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="4" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+  </svg>
+</body>
+
+</html>

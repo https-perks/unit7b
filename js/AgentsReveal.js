@@ -13,7 +13,7 @@ function revealAgents() {
     "agent-tern": "Grace Short",
     "agent-soot": "Emma Spengler",
     "agent-fawn": "Elsie Sorrell",
-    "agent-glint": "To Be Determined",
+    "agent-glint": "Willem Azzinnaro",
     "agent-echo": "Makayla Kunde",
     "agent-flint": "To Be Determined",
     "quote": "become us",
