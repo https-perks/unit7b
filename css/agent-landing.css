@@ -208,6 +208,13 @@ body.employee-landing {
   border: 1.5px solid #ffd86355;
 }
 
+@media (max-width: 830px) {
+  .progress-tracker {
+    padding: 0.5em 1em 0.5em 1em;
+    margin: 1em auto 0.75em auto;
+  }
+}
+
 .tracker-title {
   text-align: center;
   font-size: 1.25rem;
@@ -326,13 +333,13 @@ body.employee-landing {
 
 @media (max-width: 830px) {
   .portal-main-scroll {
-    height: 75vh;
+    height: 72vh;
   }
 }
 
 @media (max-width: 300px) {
   .portal-main-scroll {
-    height: 72vh;
+    height: 70vh;
   }
 }
 
