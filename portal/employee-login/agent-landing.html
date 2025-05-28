@@ -29,44 +29,44 @@
 <body class="employee-landing">
   <div id="page-blur-overlay"></div>
   <div class="portal-main-scroll">
-  <div class="portal-container">
-    <!-- Agent avatar and heading at the top -->
-    <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 1.7em;">
-      <span id="agent-avatar" class="portal-avatar" aria-hidden="true"></span>
-      <h1 id="welcome-heading" style="margin: 0; font-size: 2rem; text-align: left;"></h1>
+    <div class="portal-container">
+      <!-- Agent avatar and heading at the top -->
+      <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 1.7em;">
+        <span id="agent-avatar" class="portal-avatar" aria-hidden="true"></span>
+        <h1 id="welcome-heading" style="margin: 0; font-size: 2rem; text-align: left;"></h1>
+      </div>
+
+      <!-- Example Portal Navigation -->
+      <nav class="portal-nav">
+        <a href="/portal/employee-login/resources.html">Resources</a>
+        <a href="/portal/employee-login/cache.html">Cache</a>
+        <a href="/portal/employee-login/calendar.html">Calendar</a>
+        <a href="/portal.html">Return to Main Site</a>
+      </nav>
+
+      <!-- Example Portal Section -->
+      <div class="portal-card">
+        <h2 class="portal-section-title">Latest Announcements</h2>
+        <div class="portal-info">
+          Welcome to the Unit 7-B Employee Portal. New features and reports will appear here throughout the season!
+        </div>
+        <div class="portal-info">
+          <strong>Passcodes:</strong><em>(All lowercase w/ no spaces)</em><br>
+          <br>Directory Info: raven42<br>
+          Restricted Logs: directorpineseyesonly<br>
+          All Other Logs: agentpines17
+        </div>
+        <div class="portal-info">
+          <strong>Update 5/27/2025:</strong><br>
+          Stage 1 Complete.<br>
+          Packets w/ Field Dossier have been placed on car windshields.<br>
+          <em>Proof of reading unavailable.</em>
+        </div>
+      </div>
+
+      <!-- Logout Button -->
+      <button id="logout-btn" onclick="logOut()">Log Out</button>
     </div>
-
-    <!-- Example Portal Navigation -->
-    <nav class="portal-nav">
-      <a href="/portal/employee-login/resources.html">Resources</a>
-      <a href="/portal/employee-login/cache.html">Cache</a>
-      <a href="/portal/employee-login/calendar.html">Calendar</a>
-      <a href="/portal.html">Return to Main Site</a>
-    </nav>
-
-    <!-- Example Portal Section -->
-    <div class="portal-card">
-      <h2 class="portal-section-title">Latest Announcements</h2>
-      <div class="portal-info">
-        Welcome to the Unit 7-B Employee Portal. New features and reports will appear here throughout the season!
-      </div>
-      <div class="portal-info">
-        <strong>Passcodes:</strong><em>(All lowercase w/ no spaces)</em><br>
-        <br>Directory Info: raven42<br>
-        Restricted Logs: directorpineseyesonly<br>
-        All Other Logs: agentpines17
-      </div>
-      <div class="portal-info">
-        <strong>Update 5/27/2025:</strong><br>
-        Stage 1 Complete.<br>
-        Packets w/ Field Dossier have been placed on car windshields.<br>
-        <em>Proof of reading unavailable.</em>
-      </div>
-    </div>
-
-    <!-- Logout Button -->
-    <button id="logout-btn" onclick="logOut()">Log Out</button>
-  </div>
   </div>
   <footer class="progress-tracker-footer">
     <section class="progress-tracker">
