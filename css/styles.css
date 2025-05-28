@@ -19,6 +19,12 @@ body {
   position: relative;
 }
 
+/* Ensure body/page never scrolls (only the main scroll does) */
+body, html {
+  overflow: hidden !important;
+  height: 100vh;
+}
+
 img {
   max-width: 100%;
   display: block;
