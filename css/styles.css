@@ -186,6 +186,13 @@ body.proceed {
   margin-top: 2rem;
 }
 
+@media (max-width: 750px) {
+  .proceed .sigil {
+    width: 150px;
+    margin-bottom: 0;
+  }
+}
+
 .proceed h1.top-secret {
   color: #c2b283;
   font-size: 2rem;
