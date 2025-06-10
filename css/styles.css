@@ -175,23 +175,34 @@ body.proceed {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  gap: 5vh;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .proceed .sigil {
-  width: 300px;
+  width: min(30vw, 200px);
   opacity: 0.6;
   filter: blur(0.5px);
   mix-blend-mode: screen;
-  margin-top: 2rem;
 }
 
-@media (max-width: 750px) {
+@media (max-height: 500px) {
+  .proceed {
+    gap: 1rem;
+    padding: 1rem;
+  }
+
   .proceed .sigil {
-    width: 150px;
-    margin-bottom: 0;
+    width: 120px;
+  }
+
+  .proceed .container {
+    padding: 1rem;
+    font-size: 0.9rem;
   }
 }
+
 
 .proceed h1.top-secret {
   color: #c2b283;
@@ -208,8 +219,11 @@ body.proceed {
 }
 
 .proceed .container {
-  max-width: 960px;
-  padding: 2rem;
+  max-width: 90vw;
+  width: 90vw;
+  max-height: 50vh;
+  overflow-y: auto;
+  padding: 1.5rem;
   border-radius: 10px;
   background: rgba(30, 27, 22, 0.85);
   border: 1px solid #383129;
